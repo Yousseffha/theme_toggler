@@ -1,0 +1,81 @@
+/* start variables */
+:root {
+    --dark: #292C35;
+    --moon-color: #F1C40F;
+    --sun-color: #F39C12;
+}
+/* end variables */
+
+/*start global rules*/
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: 0.3s ease background-color;
+    font-family: 'Poppins', sans-serif;
+}
+/*end global rules*/
+/*start text*/
+.heading {
+    margin-bottom: 65px;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: capitalize;
+    color: var(--sun-color);
+}
+/*end text*/
+/*start toggler*/
+.toggler {
+    background-color: #111111;
+    border-radius: 25px;
+    width: 75px;
+    height: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 6px;
+    position: relative;
+    cursor: pointer;
+}
+.toggler span {
+    font-size: 22px;
+}
+.toggler span:first-of-type {
+    color: var(--moon-color);
+}
+.toggler span:last-of-type {
+    color: var(--sun-color);
+}
+.toggler::before {
+    content: "";
+    position: absolute;
+    width: 29px;
+    height: 29px;
+    background-color: white;
+    border-radius: 50%;
+    transform: translateX(-1px);
+    transition: transform  0.3s ease ;
+}
+.right::before {
+    transform: translateX(35px);
+}
+.dark {
+    background-color: var(--dark);
+}
+/*end toggler*/
+/*start quotes*/
+.quotes {
+    margin-top: 65px;
+    text-align: center;
+    line-height: 1.7;
+    color: var(--sun-color);
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+/*end quotes*/
